@@ -50,7 +50,7 @@ const Settings = () => {
 
     const handleRestorePin = async () => {
         try {
-            const response = await fetch("http://localhost:4400/restore", {
+            const response = await fetch("https://wallet-app-server.vercel.app/restore", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

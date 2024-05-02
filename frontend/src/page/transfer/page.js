@@ -51,7 +51,7 @@ const Transfer = () => {
             console.log('Transferring', amount, currency, 'to', recipient);
 
 
-            const response = await fetch("http://localhost:4400/transfer", {
+            const response = await fetch("https://wallet-app-server.vercel.app/transfer", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

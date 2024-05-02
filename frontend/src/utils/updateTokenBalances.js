@@ -5,7 +5,7 @@ function useUpdateTokenBalances () {
     const { userDetails, updateUserDetails } = useUser();
     const fetchAndUpdateTokenBalances = async () => {
         try {
-            const response = await fetch("http://localhost:4400/balance", {
+            const response = await fetch("https://wallet-app-server.vercel.app/balance", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

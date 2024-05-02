@@ -25,7 +25,7 @@ export default function Create() {
     const username = userDetails.id;
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:4400/createwallet", {
+      const response = await fetch("https://wallet-app-server.vercel.app/createwallet", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

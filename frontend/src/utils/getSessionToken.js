@@ -8,7 +8,7 @@ const useSessionToken = () => {
   const fetchSessionToken = useCallback(async () => {
     const creationTime = Date.now();  
     try {
-      const response = await fetch("http://localhost:4400/sessiontoken", {
+      const response = await fetch("https://wallet-app-server.vercel.app/sessiontoken", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

@@ -1,20 +1,14 @@
 {
-  "name": "circle-bounty-backend",
+  "name": "circle-bounty",
   "version": "1.0.0",
-  "description": "Backend service for managing programmable wallets using Circle APIs.",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "circle-api",
-    "wallet-management",
-    "crypto",
-    "nodejs"
-  ],
-  "author": "Your Name <your.email@example.com>",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "@circle-fin/user-controlled-wallets": "^1.0.2",
@@ -23,8 +17,5 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "yargs": "^17.7.2"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.19"
   }
 }

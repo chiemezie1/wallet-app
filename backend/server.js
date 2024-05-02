@@ -222,7 +222,6 @@ app.post('/restore', async (req, res) => {
 
 
 app.post('/balance', async (req, res) => {
-    // Extract the username from the request body
     const { username, userToken } = req.body;
  
     try {
@@ -275,7 +274,6 @@ app.post('/transactions', async (req, res) => {
     } catch (error) {
         console.error('Error listing transactions:', error);
 
-        // Handle specific errors
         if (error.response?.data?.code === 2) {
             res.status(409).json({ message: 'API parameter invalid' });
         } else {

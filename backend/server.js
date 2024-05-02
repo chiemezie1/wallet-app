@@ -16,7 +16,7 @@ const client = initiateUserControlledWalletsClient({
 // Configure cors middleware with credentials and specific origin
 app.use(cors({
     credentials: true,
-    origin: 'http://localhost:4550'
+    origin: 'https://wallet-app-frontend-alpha.vercel.app/',
 }));
 
 

@@ -284,7 +284,6 @@ app.post('/transactions', async (req, res) => {
     }
 });
 
-
 async function fetchUUIDs() {
     const url = 'https://www.uuidgenerator.net/api/version4';
     const headers = {
@@ -304,9 +303,6 @@ async function fetchUUIDs() {
         return null;
     }
 }
-
-
-
 
 
 

@@ -11,7 +11,6 @@ import Register from './page/register/page';
 import Wallet from './page/wallet/page';
 import WalletCreation from './page/wallet/create/page';
 import W3ssdk  from './page/wallet/create/w3ssdk';
-import Test from './test';
 
 
 import reportWebVitals from './reportWebVitals';
@@ -29,7 +28,6 @@ ReactDOM.createRoot(root).render(
         <Route path="/wallet" element={<Wallet />} />
         <Route path="/createwallet" element={<WalletCreation />} />
         <Route path="/w3ssdk" element={<W3ssdk />} />
-        <Route path="/test" element={<Test />} />
       </Routes>
     </Router>
   </React.StrictMode>

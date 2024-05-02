@@ -13,6 +13,18 @@ Welcome to the Wallet App Frontend, a comprehensive web application designed for
 - **Settings Management**: Users can manage their account settings, including adding or removing beneficiaries, directly through the interface.
 - **Wallet Recovery**: Incorporates a secure PIN recovery functionality that enhances user safety and accessibility.
 
+## **Special Components**
+
+- **W3SSdk Integration**: **`w3ssdk.js`** (src/page/wallet/w3ssdk.js) is utilized to interact with Circle's APIs, handling challenge execution. This SDK is crucial for secure blockchain operations and enhances the application's functionality by seamlessly integrating with backend services.
+
+## **API Requirements**
+
+This application relies on several key APIs from Circle to operate
+To fully utilize these APIs, you must obtain the necessary credentials including:
+- **`APP_ID`**: Your unique application identifier provided by Circle.
+
+Ensure these credentials are stored before launching the application.
+
 ## **Live Application**
 
 Explore the application live here: [Wallet App](https://wallet-app-frontend-alpha.vercel.app/)

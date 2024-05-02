@@ -1,7 +1,5 @@
-### **README.md**
 
-
-# Circle Wallet Management Backend
+# Circle Wallet App Backend
 
 This project implements a backend service using Node.js and Express to interact with the Circle APIs for managing user-controlled wallets on the Ethereum-Sepolia blockchain. It includes endpoints for user registration, login, session token generation, wallet creation, balance checking, transaction listing, and more.
 
@@ -99,8 +97,7 @@ backend/
 ```
 
 ## **License**
-
-licensed.
+This project is licensed under the MIT License. See the LICENSE file in the project root for more information.
 
 ## **Contributing**
 

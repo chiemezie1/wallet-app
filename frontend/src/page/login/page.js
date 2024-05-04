@@ -26,7 +26,7 @@ function CreateUser() {
     }
     try {
       const response = await fetch("https://wallet-app-server.vercel.app/login", {
-        method: 'POST',
+        method: 'GET',
         headers: {
           'Content-Type': 'application/json',
         },

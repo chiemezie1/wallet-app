@@ -43,7 +43,7 @@ app.post('/register', async (req, res) => {
     }
 });
 
-app.post('/login', async (req, res) => {
+app.get('/login', async (req, res) => {
     // Extract the username from the request body
     const { username } = req.body;
     let response;

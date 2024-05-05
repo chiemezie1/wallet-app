@@ -19,7 +19,7 @@
         },
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "https://wallet-app-frontend-alpha.vercel.app/"
+          "value": "https://wallet-app-frontend-alpha.vercel.app"
         },
         {
           "key": "Access-Control-Allow-Methods",

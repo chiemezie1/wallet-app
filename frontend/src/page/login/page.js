@@ -25,7 +25,7 @@ function CreateUser() {
         return;
     }
     try {
-        const url = new URL("https://wallet-app-server.vercel.app/login");
+        const url = new URL("https://wallet-app-server.vercel.app/login/");
         url.searchParams.append('username', username);
         
         const response = await fetch(url, {

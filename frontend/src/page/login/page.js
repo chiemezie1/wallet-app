@@ -21,44 +21,47 @@ function CreateUser() {
     e.preventDefault();
     resetUserDetails();
     if (username.trim() === '') {
-      setResponse('Username cannot be empty');
-      return;
+        setResponse('Username cannot be empty');
+        return;
     }
     try {
-      const response = await fetch("https://wallet-app-server.vercel.app/login", {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username }),
-      });
-      const data = await response.json();
-      if (response.ok) {
-        const user = data.message.user;
-        updateUserDetails({
-          id: user.id,
-          status: user.status,
-          createDate: user.createDate,
-          pinStatus: user.pinStatus,
-          blockchain: user.blockchain,
-          pinDetails: user.pinDetails
+        const url = new URL("https://wallet-app-server.vercel.app/login");
+        url.searchParams.append('username', username);
+        
+        const response = await fetch(url, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
         });
+        const data = await response.json();
+        if (response.ok) {
+            const user = data.message.user;
+            updateUserDetails({
+                id: user.id,
+                status: user.status,
+                createDate: user.createDate,
+                pinStatus: user.pinStatus,
+                blockchain: user.blockchain,
+                pinDetails: user.pinDetails
+            });
 
-        // Redirect to the dashboard or profile page
-        navigate('/wallet');
-      } else {
-        if (data.code === 155102) {
-          setResponse('User not found');
+            // Redirect to the dashboard or profile page
+            navigate('/wallet');
         } else {
-          console.error('Error:', data.message);
-          setResponse(data.message);
+            if (data.code === 155102) {
+                setResponse('User not found');
+            } else {
+                console.error('Error:', data.message);
+                setResponse(data.message);
+            }
         }
-      }
     } catch (error) {
-      console.error('Error:', error.message);
-      setResponse('Failed to logIn');
+        console.error('Error:', error.message);
+        setResponse('Failed to log in');
     }
-  };
+};
+
 
   return (
     <div

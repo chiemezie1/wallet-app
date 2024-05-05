@@ -44,8 +44,8 @@ app.post('/register', async (req, res) => {
 });
 
 app.get('/login', async (req, res) => {
-    // Extract the username from the request body
-    const { username } = req.body;
+    // Extract the username from the query string
+    const { username } = req.query;
     let response;
     try {
         response = await client.getUser({
@@ -65,6 +65,7 @@ app.get('/login', async (req, res) => {
         }
     }
 });
+
 
 app.post('/sessiontoken', async (req, res) => {
     // Extract the username from the request body

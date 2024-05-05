@@ -14,7 +14,7 @@ function CreateUser() {
       return;
     }
     try {
-      const response = await fetch("https://wallet-app-server.vercel.app/register", {
+      const response = await fetch("https://localhost:3000/register", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

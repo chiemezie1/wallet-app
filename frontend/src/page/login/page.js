@@ -2,12 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import create_wallect from '../../create_wallect.png';
 import { useUser } from '../../userContext/UserContext';
+import useUpdateTokenBalances from '../../utils/updateTokenBalances';
 
 function CreateUser() {
   const [username, setUsername] = useState('');
   const { updateUserDetails, resetUserDetails } = useUser();
   const [response, setResponse] = useState('');
   const navigate = useNavigate();
+
+  useUpdateTokenBalances();
 
   useEffect(() => {
     const timer = setTimeout(() => {
